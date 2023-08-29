@@ -11,11 +11,9 @@ function App() {
     return (
         <Provider store={store}>
             <ThemeProvider>
-                <div className="min-h-screen flex flex-col">
+                <div className="h-screen flex flex-col">
                     <Header/>
-                    <main className="flex flex-auto justify-center items-center h-full">
-                        <MainContent/>
-                    </main>
+                    <MainContent/>
                     <Footer/>
                 </div>
             </ThemeProvider>
