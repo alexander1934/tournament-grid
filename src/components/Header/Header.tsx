@@ -16,7 +16,8 @@ const Header: React.FC = () => {
     const {type} = useTheme();
 
     return <header className={cn("flex items-center justify-between h-16 bg-orange-300", {
-        "bg-gray-800 text-white": type === "dark"
+        "bg-gray-800 text-white": type === "dark",
+        "bg-orange-300": type === "light",
     })}>
         <div></div>
         <nav className="w-1/3">
