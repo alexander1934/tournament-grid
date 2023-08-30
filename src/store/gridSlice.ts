@@ -1,18 +1,13 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {IRoundProps} from "react-brackets";
-
-type State = {
-    teams: number;
-    isGenerated: boolean;
-    rounds: IRoundProps[];
-    tournamentName: string;
-};
+import {State} from "../types/types";
 
 const initialState:State = {
     teams: 0,
     isGenerated: false,
     tournamentName: "",
-    rounds: []
+    rounds: [],
+    games: [],
+    currentGame: "",
 }
 
 const gridSlice = createSlice({
@@ -45,6 +40,12 @@ const gridSlice = createSlice({
                     seeds: seeds,
                 });
             }
+        },
+        getGamesList(state, action){
+            state.games = action.payload
+        },
+        getGameName(state, action){
+            state.currentGame = action.payload
         }
     }
 })
@@ -52,5 +53,7 @@ const gridSlice = createSlice({
 export const {getTeams,
     generatedStatusSwitcher,
     getTournamentName,
-    generateRounds} = gridSlice.actions;
+    generateRounds,
+    getGamesList,
+    getGameName} = gridSlice.actions;
 export default gridSlice.reducer;

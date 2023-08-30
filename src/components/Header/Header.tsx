@@ -19,12 +19,10 @@ const Header: React.FC = () => {
         "bg-gray-800 text-white": type === "dark",
         "bg-orange-300": type === "light",
     })}>
-        <div></div>
-        <nav className="w-1/3">
+        <div className="ml-10"></div>
+        <nav>
             <ul className="flex justify-between text-lg">
                 <li><button onClick={hideForm}>Генерация</button></li>
-                <li>О турнире</li>
-                <li>Команды</li>
             </ul>
         </nav>
         {/*Смена темы*/}

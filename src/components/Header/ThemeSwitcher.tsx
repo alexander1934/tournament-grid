@@ -7,7 +7,7 @@ const ThemeSwitcher = () => {
     const {type, setType} = useTheme();
 
     return <button onClick={()=>setType(type === "light" ? "dark" : "light")}>
-        {type === "light" ? <img src={moon} alt="" className="w-7 mr-10"/> : <img src={sun} alt="" className="w-7 mr-10"/>}
+        {type === "light" ? <img src={moon} alt="Dark" className="w-7 mr-10"/> : <img src={sun} alt="Light" className="w-7 mr-10"/>}
 
     </button>
 }

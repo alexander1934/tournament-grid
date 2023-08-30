@@ -12,7 +12,7 @@ const Schedule = () => {
         <div className="flex flex-col justify-between items-center h-96">
             <h1 className={cn("font-medium text-3xl my-10", {
                 "text-white": type === "dark"
-            })}>{state.tournamentName}</h1>
+            })}>{state.tournamentName} - {state.currentGame}</h1>
             <Bracket rounds={state.rounds} />
             <div></div>
         </div>
